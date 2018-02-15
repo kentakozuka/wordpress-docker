@@ -6,7 +6,7 @@ mkdir -p db-data/
 mkdir -p logs/nginx/
 mkdir -p wordpress/
 
-cat <EOF>>nginx/wordpress.conf
+cat <<EOF>nginx/wordpress.conf
 server {
     listen 80;
     server_name wp-hakase.co;
@@ -33,7 +33,7 @@ server {
 }
 EOF
 
-cat <EOF>>docker-compose.yml
+cat <<EOF>docker-compose.yml
 nginx:
     image: nginx:latest
     ports:
